@@ -46,7 +46,7 @@ function OrderCard({orderData}) {
         const currentUser = user ? JSON.parse(user).currentUser : {};
         const TOKEN = currentUser && currentUser.accessToken ? currentUser.accessToken : null;
         if (TOKEN != null) {
-          await fetch(`http://http://134.199.238.36:7722/api/events/${orderData.orderEventId}`,{
+          await fetch(`http://134.199.238.36:7722/api/events/${orderData.orderEventId}`,{
           headers: {
             'Content-Type': 'application/json',
             token: `Bearer ${TOKEN}`,
@@ -61,7 +61,7 @@ function OrderCard({orderData}) {
       }, []);
   return (
     <OrderCardBox>
-        <OrderCardImg src={`http://http://134.199.238.36:7722/public/images/Flyer1.png`}/>
+        <OrderCardImg src={`http://134.199.238.36:7722/public/images/Flyer1.png`}/>
         <OrderCardTexts>
             <OrderCardTitle>{orderData.eventName}</OrderCardTitle>
             <OrderCardTickets>{orderData.ticketQuantityOrder}</OrderCardTickets>

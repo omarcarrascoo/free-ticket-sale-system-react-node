@@ -21,7 +21,7 @@ function PayNow({ order, orderId }) {
     console.log(orderId)
     const setNewOrder = async (data) => {
         try {
-            const response = await axios.post(`http://http://134.199.238.36:7722/api/orders/setOrder`, data, {
+            const response = await axios.post(`http://134.199.238.36:7722/api/orders/setOrder`, data, {
                 headers: {
                     'Content-Type': 'application/json',
                 },
@@ -49,7 +49,7 @@ function PayNow({ order, orderId }) {
         const makeRequest = async(data) =>{
             try {
                 const res = await axios.post(
-                    "http://http://134.199.238.36:7722/api/checkout/payment",{
+                    "http://134.199.238.36:7722/api/checkout/payment",{
                         tokenId: stripeToken.id,
                         amount: totalMult,
                     }
@@ -75,7 +75,7 @@ function PayNow({ order, orderId }) {
     return (
     <StripeCheckout 
     orderMail={order.mail} 
-    image="http://http://134.199.238.36:7722/public/images/EventTest.png" 
+    image="http://134.199.238.36:7722/public/images/EventTest.png" 
     billingAddress 
     description={`Total de compra: $ ${order.totalOrder}`}
     amount={totalMult} 

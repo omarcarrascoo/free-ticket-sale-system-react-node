@@ -127,7 +127,7 @@ function Login() {
   return (
     <LoginSection>
         <LoginLeft>
-            <LoginImg src='http://http://134.199.238.36:7722/public/images/9.jpg'/>
+            <LoginImg src='http://134.199.238.36:7722/public/images/9.jpg'/>
         </LoginLeft>
         <LoginRight>
             <Link className='normal' to={"/"}>

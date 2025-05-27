@@ -30,7 +30,7 @@ function OrderList() {
           const currentUser = user ? JSON.parse(user).currentUser : {};
           const TOKEN = currentUser && currentUser.accessToken ? currentUser.accessToken : null;
       if(TOKEN != null){
-        await fetch(`http://http://134.199.238.36:7722/api/orders/userOrders/${userId}`,{
+        await fetch(`http://134.199.238.36:7722/api/orders/userOrders/${userId}`,{
           headers: {
             'Content-Type': 'application/json',
             token: `Bearer ${TOKEN}`,

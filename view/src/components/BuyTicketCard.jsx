@@ -55,7 +55,7 @@ function BuyTicketCard({userMail}) {
     const [orderEventId, setorderEventId] = useState(null);
     const [eventPriceOrder, seteventPriceOrder] = useState(null);
     const fetchEvent = async () => {
-        await fetch(`http://http://134.199.238.36:7722/api/events/${eventId}`)
+        await fetch(`http://134.199.238.36:7722/api/events/${eventId}`)
           .then(response => response.json())
           .then(data => {
             setEvent(data)
@@ -98,7 +98,7 @@ function BuyTicketCard({userMail}) {
       }, [ticketQuantityOrder]);
   return (
     <BuyCard>
-        <BuyCardImg src={`http://http://134.199.238.36:7722/public/images/${eventData.eventBanner}`}/>
+        <BuyCardImg src={`http://134.199.238.36:7722/public/images/${eventData.eventBanner}`}/>
         <BuyCardTitle>{eventData.eventName}</BuyCardTitle>
         <BuyCardParr>{`Total: $${totalOrder}.00`}</BuyCardParr>
         <BuyCardParr>Quantity </BuyCardParr>
