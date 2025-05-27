@@ -122,7 +122,7 @@ function Register() {
             setPassword(updatedData.password)
         try {
             
-            const response = await axios.post(`http://http://134.199.238.36:7722//api/auth/register`, updatedData, {
+            const response = await axios.post(`http://http://134.199.238.36:7722/api/auth/register`, updatedData, {
             headers: {
               'Content-Type': 'application/json'
             }
@@ -155,7 +155,7 @@ function Register() {
   return (
     <LoginSection>
         <LoginLeft>
-            <LoginImg src='http://http://134.199.238.36:7722//public/images/13.png'/>
+            <LoginImg src='http://http://134.199.238.36:7722/public/images/13.png'/>
         </LoginLeft>
         <LoginRight>
             <Link className='normal' to={"/"}>

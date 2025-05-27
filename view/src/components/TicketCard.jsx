@@ -78,7 +78,7 @@ function TicketCard({ticketData}) {
         const currentUser = user ? JSON.parse(user).currentUser : {};
         const TOKEN = currentUser && currentUser.accessToken ? currentUser.accessToken : null;
         if (TOKEN != null) {
-          await fetch(`http://http://134.199.238.36:7722//api/events/${ticketData.orderEventId}`,{
+          await fetch(`http://http://134.199.238.36:7722/api/events/${ticketData.orderEventId}`,{
           headers: {
             'Content-Type': 'application/json',
             token: `Bearer ${TOKEN}`,
@@ -86,7 +86,7 @@ function TicketCard({ticketData}) {
         })
           .then(response => response.json())
           .then(data => setEvent(data));
-          await fetch(`http://http://134.199.238.36:7722//api/tickets/${ticketData._id}`,{
+          await fetch(`http://http://134.199.238.36:7722/api/tickets/${ticketData._id}`,{
             headers: {
               'Content-Type': 'application/json',
               token: `Bearer ${TOKEN}`,
@@ -114,7 +114,7 @@ function TicketCard({ticketData}) {
           const updateData = {ticketAssistant: ticketAssistantName}
           console.log(updateData);
           if(TOKEN != null){
-            const response = await axios.put(`http://http://134.199.238.36:7722//api/tickets/${ticketData._id}`,  updateData, {
+            const response = await axios.put(`http://http://134.199.238.36:7722/api/tickets/${ticketData._id}`,  updateData, {
               headers: {
                   'Content-Type': 'application/json',
                   token: `Bearer ${TOKEN}`
@@ -133,7 +133,7 @@ function TicketCard({ticketData}) {
             <OrderCardlegend>Event</OrderCardlegend>
             <OrderCardTitle>{tickets.eventName}</OrderCardTitle>
         </OrderCardTexts>
-        {tickets.ticketAssistant?<QRCode className='qrCode' value={`http://http://134.199.238.36:7722//api/ticket/${tickets._id}`}/>:<OrderCardImg src={`http://http://134.199.238.36:7722//public/images/fakeQR.png`}/>}
+        {tickets.ticketAssistant?<QRCode className='qrCode' value={`http://http://134.199.238.36:7722/api/ticket/${tickets._id}`}/>:<OrderCardImg src={`http://http://134.199.238.36:7722/public/images/fakeQR.png`}/>}
         <OrderCardTexts>
             {
             tickets.ticketAssistant?

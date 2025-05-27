@@ -42,7 +42,7 @@ const BtnContainer = styled.div`
 function EventCard({eventData}) {
   return (
     <Card>
-      <CardImg src={`http://http://134.199.238.36:7722//public/images/${eventData.eventBanner}`}/>
+      <CardImg src={`http://http://134.199.238.36:7722/public/images/${eventData.eventBanner}`}/>
       <CardTitle>{eventData.eventName}</CardTitle>
       <CardPrice>${eventData.eventPrice}.00</CardPrice>
       <Link to={`/event/${eventData._id}`}><CardShowMore>Show More</CardShowMore></Link>

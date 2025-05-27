@@ -32,7 +32,7 @@ function TicketList() {
               const currentUser = user ? JSON.parse(user).currentUser : {};
               const TOKEN = currentUser && currentUser.accessToken ? currentUser.accessToken : null;
            if(TOKEN != null){
-            await fetch(`http://http://134.199.238.36:7722//api/tickets/byOrderId/${orderId}`,{
+            await fetch(`http://http://134.199.238.36:7722/api/tickets/byOrderId/${orderId}`,{
               headers: {
                 'Content-Type': 'application/json',
                 token: `Bearer ${TOKEN}`,

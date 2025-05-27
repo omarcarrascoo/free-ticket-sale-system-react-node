@@ -65,7 +65,7 @@ export default function Event() {
     const [eventData, setEvent] = useState([])
     const {eventId} = useParams()
     const fetchEvent = async () => {
-        await fetch(`http://http://134.199.238.36:7722//api/events/${eventId}`)
+        await fetch(`http://http://134.199.238.36:7722/api/events/${eventId}`)
           .then(response => response.json())
           .then(data => setEvent(data));
       };
@@ -77,7 +77,7 @@ export default function Event() {
     <Header/>
     <EventSection>
         <EventImgContainer>
-            <EventImg src={`http://http://134.199.238.36:7722//public/images/${eventData.eventBanner}`}/>
+            <EventImg src={`http://http://134.199.238.36:7722/public/images/${eventData.eventBanner}`}/>
         </EventImgContainer>
         <EventTextContainer>
             <EventTitle>{eventData.eventName}</EventTitle>
