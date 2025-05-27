@@ -26,7 +26,7 @@ function Orders() {
     <>
     <Header/>
     <OrdersSection>
-        <OrdersTitle>Ordenes</OrdersTitle>
+        <OrdersTitle>Orders</OrdersTitle>
         <OrderList/>
     </OrdersSection>
     <Footer/>

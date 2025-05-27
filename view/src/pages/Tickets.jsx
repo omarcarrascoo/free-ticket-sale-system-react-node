@@ -35,8 +35,8 @@ function Tickets() {
     <>
         <Header/>
         <TicketsSection>
-            <TicketsTitle>Tickets de la orden</TicketsTitle>
-            <TicketsLegend>Siempre puedes acceder a tus ordenes desde el menu una vez que inicias sesion</TicketsLegend>
+            <TicketsTitle>My Tickets</TicketsTitle>
+            <TicketsLegend>You can always access to your tickets from the menu once you log in </TicketsLegend>
             <TicketList/>
         </TicketsSection>
         <Footer/>

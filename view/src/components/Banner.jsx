@@ -7,10 +7,10 @@ const BannerSection = styled.section`
 `;
 const BannerImg = styled.img`
     max-width: 100%;
-    max-height: 100%;
+    max-height: 60vh;
     width: 100%;
     height: auto;
-    object-fit: cover;
+    
 `;
 
 function Banner({img}) {

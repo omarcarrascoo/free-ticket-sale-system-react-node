@@ -15,7 +15,7 @@ const EventCards = styled.div`
 function EventList() {
   const [events, setEvents] = useState([])
   const fetchEvents =()=>{
-    fetch(`https://sinapsisproductions.online/api/events/`)
+    fetch(`http://localhost:7722/api/events/`)
     .then(response =>{
       return response.json()
     })

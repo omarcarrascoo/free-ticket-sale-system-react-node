@@ -65,7 +65,7 @@ export default function Event() {
     const [eventData, setEvent] = useState([])
     const {eventId} = useParams()
     const fetchEvent = async () => {
-        await fetch(`https://sinapsisproductions.online/api/events/${eventId}`)
+        await fetch(`http://localhost:7722/api/events/${eventId}`)
           .then(response => response.json())
           .then(data => setEvent(data));
       };
@@ -77,7 +77,7 @@ export default function Event() {
     <Header/>
     <EventSection>
         <EventImgContainer>
-            <EventImg src={`https://sinapsisproductions.online/public/images/${eventData.eventBanner}`}/>
+            <EventImg src={`http://localhost:7722/public/images/${eventData.eventBanner}`}/>
         </EventImgContainer>
         <EventTextContainer>
             <EventTitle>{eventData.eventName}</EventTitle>

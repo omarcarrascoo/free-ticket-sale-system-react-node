@@ -78,7 +78,7 @@ function TicketCard({ticketData}) {
         const currentUser = user ? JSON.parse(user).currentUser : {};
         const TOKEN = currentUser && currentUser.accessToken ? currentUser.accessToken : null;
         if (TOKEN != null) {
-          await fetch(`https://sinapsisproductions.online/api/events/${ticketData.orderEventId}`,{
+          await fetch(`http://localhost:7722/api/events/${ticketData.orderEventId}`,{
           headers: {
             'Content-Type': 'application/json',
             token: `Bearer ${TOKEN}`,
@@ -86,7 +86,7 @@ function TicketCard({ticketData}) {
         })
           .then(response => response.json())
           .then(data => setEvent(data));
-          await fetch(`https://sinapsisproductions.online/api/tickets/${ticketData._id}`,{
+          await fetch(`http://localhost:7722/api/tickets/${ticketData._id}`,{
             headers: {
               'Content-Type': 'application/json',
               token: `Bearer ${TOKEN}`,
@@ -114,7 +114,7 @@ function TicketCard({ticketData}) {
           const updateData = {ticketAssistant: ticketAssistantName}
           console.log(updateData);
           if(TOKEN != null){
-            const response = await axios.put(`https://sinapsisproductions.online/api/tickets/${ticketData._id}`,  updateData, {
+            const response = await axios.put(`http://localhost:7722/api/tickets/${ticketData._id}`,  updateData, {
               headers: {
                   'Content-Type': 'application/json',
                   token: `Bearer ${TOKEN}`
@@ -130,24 +130,24 @@ function TicketCard({ticketData}) {
   return (
     <OrderCardBox>
       <OrderCardTexts>
-            <OrderCardlegend>Evento</OrderCardlegend>
+            <OrderCardlegend>Event</OrderCardlegend>
             <OrderCardTitle>{tickets.eventName}</OrderCardTitle>
         </OrderCardTexts>
-        {tickets.ticketAssistant?<QRCode className='qrCode' value={`https://sinapsisproductions.online/api/ticket/${tickets._id}`}/>:<OrderCardImg src={`https://sinapsisproductions.online/public/images/fakeQR.png`}/>}
+        {tickets.ticketAssistant?<QRCode className='qrCode' value={`http://localhost:7722/api/ticket/${tickets._id}`}/>:<OrderCardImg src={`http://localhost:7722/public/images/fakeQR.png`}/>}
         <OrderCardTexts>
             {
             tickets.ticketAssistant?
-            <CaptureText><TbPhotoSensor className='captureIcon'/> Toma camptura y mandasela a tu invitado.</CaptureText>:
+            <CaptureText><TbPhotoSensor className='captureIcon'/> Take a screen shot and send it to your guest.</CaptureText>:
             <SetNameContainer>
-                <InputName onChange={(e)=> setTicketAssistantName(e.target.value)} name='ticketAssistant' placeholder='Persona que usara el boleto...'/>
-                <OrderCardBtn onClick={handdleClick}>Asignar Ticket</OrderCardBtn> 
+                <InputName onChange={(e)=> setTicketAssistantName(e.target.value)} name='ticketAssistant' placeholder='Name of the guest...'/>
+                <OrderCardBtn onClick={handdleClick}>Assign Ticket</OrderCardBtn> 
             </SetNameContainer>
             
             }
             {
             tickets.ticketAssistant?
             <OrderCardTickets>{tickets.ticketAssistant}</OrderCardTickets>:
-            <OrderCardlegend2>Asigna con tu nombre o el de tu invitado</OrderCardlegend2>}
+            <OrderCardlegend2>Assign with your name or your guests name</OrderCardlegend2>}
         </OrderCardTexts>
     </OrderCardBox>
   )

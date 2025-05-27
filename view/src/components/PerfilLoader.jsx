@@ -72,18 +72,18 @@ function PerfilLoader() {
         }, []);
   return (
     <PerfilLoaderContainer>
-        <PerfilLoaderTitle>TUS DATOS</PerfilLoaderTitle>
+        <PerfilLoaderTitle>YOUR INFO</PerfilLoaderTitle>
         <PerfilLoaderTextBox>
             <PerfilLoaderTextRow>
-                <PerfilLoaderTag>Nombre</PerfilLoaderTag>
+                <PerfilLoaderTag>Name</PerfilLoaderTag>
                 <PerfilLoaderText>{userName}</PerfilLoaderText>
             </PerfilLoaderTextRow>
             <PerfilLoaderTextRow>
-                <PerfilLoaderTag>Apellido</PerfilLoaderTag>
+                <PerfilLoaderTag>Surname</PerfilLoaderTag>
                 <PerfilLoaderText>{userLast}</PerfilLoaderText>
             </PerfilLoaderTextRow>
             <PerfilLoaderTextRow>
-                <PerfilLoaderTag>Correo</PerfilLoaderTag>
+                <PerfilLoaderTag>Email</PerfilLoaderTag>
                 <PerfilLoaderText>{userMail}</PerfilLoaderText>
             </PerfilLoaderTextRow>
             {/* <PerfilLoaderTextRow>
@@ -91,12 +91,12 @@ function PerfilLoader() {
                 <PerfilLoaderText>{userPhone}</PerfilLoaderText>
             </PerfilLoaderTextRow> */}
             <PerfilLoaderTextRow>
-                <PerfilLoaderTag>Contraseña</PerfilLoaderTag>
-                <PerfilLoaderLink>Cambiar contraseña</PerfilLoaderLink>
+                <PerfilLoaderTag>Password</PerfilLoaderTag>
+                <PerfilLoaderLink>Change Password</PerfilLoaderLink>
             </PerfilLoaderTextRow>
             <PerfilLoaderBtns>
-                <PerfilLoaderBtnUpdate>Actualizar Datos</PerfilLoaderBtnUpdate>
-                <PerfilLoaderBtnDelete>Eliminar Cuenta</PerfilLoaderBtnDelete>
+                <PerfilLoaderBtnUpdate>Chang info </PerfilLoaderBtnUpdate>
+                <PerfilLoaderBtnDelete>Delete Account</PerfilLoaderBtnDelete>
             </PerfilLoaderBtns>
         </PerfilLoaderTextBox>
     </PerfilLoaderContainer>

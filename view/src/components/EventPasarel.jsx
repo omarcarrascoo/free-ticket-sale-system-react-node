@@ -23,7 +23,7 @@ const EventListContainer = styled.div`
 function EventPasarel() {
   return (
     <EventPasarelSection>
-      <EventPasarelTitle>{`EVENTOS PROXIMOS`}</EventPasarelTitle>
+      <EventPasarelTitle>{`UPCOMING EVENTS`}</EventPasarelTitle>
       <EventListContainer>
       <EventList />
       </EventListContainer>

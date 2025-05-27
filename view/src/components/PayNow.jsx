@@ -21,7 +21,7 @@ function PayNow({ order, orderId }) {
     console.log(orderId)
     const setNewOrder = async (data) => {
         try {
-            const response = await axios.post(`https://sinapsisproductions.online/api/orders/setOrder`, data, {
+            const response = await axios.post(`http://localhost:7722/api/orders/setOrder`, data, {
                 headers: {
                     'Content-Type': 'application/json',
                 },
@@ -49,7 +49,7 @@ function PayNow({ order, orderId }) {
         const makeRequest = async(data) =>{
             try {
                 const res = await axios.post(
-                    "https://sinapsisproductions.online/api/checkout/payment",{
+                    "http://localhost:7722/api/checkout/payment",{
                         tokenId: stripeToken.id,
                         amount: totalMult,
                     }
@@ -75,13 +75,13 @@ function PayNow({ order, orderId }) {
     return (
     <StripeCheckout 
     orderMail={order.mail} 
-    image="https://sinapsisproductions.online/public/images/EventTest.png" 
+    image="http://localhost:7722/public/images/EventTest.png" 
     billingAddress 
     description={`Total de compra: $ ${order.totalOrder}`}
     amount={totalMult} 
     token={onToken} 
-    stripeKey="pk_live_51NfDVuF5tP4M2zZ3rei4oQ9iZ0HxKlWRlS6lrQmvE49gKXRWY5xF2oPfUsuYhHuUM7fVHU4KrOap2D5Mfmxv2Fma00NLYdLLGf"  >
-        <BuyBtn >Pagar Tickets</BuyBtn>
+    stripeKey="pk_test_51RTFeZE4w5h4OZCMUPESSiErpXyDYAhotURjgoNdHB3xT7HYsVyEtm029MomSShduWn8Dj2j9lzrMuKXG1WRBOrS00HIPdQBvA"  >
+        <BuyBtn >Buy Tickets</BuyBtn>
     </StripeCheckout>
     );
 }

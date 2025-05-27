@@ -46,7 +46,7 @@ function OrderCard({orderData}) {
         const currentUser = user ? JSON.parse(user).currentUser : {};
         const TOKEN = currentUser && currentUser.accessToken ? currentUser.accessToken : null;
         if (TOKEN != null) {
-          await fetch(`https://sinapsisproductions.online/api/events/${orderData.orderEventId}`,{
+          await fetch(`http://localhost:7722/api/events/${orderData.orderEventId}`,{
           headers: {
             'Content-Type': 'application/json',
             token: `Bearer ${TOKEN}`,
@@ -61,12 +61,12 @@ function OrderCard({orderData}) {
       }, []);
   return (
     <OrderCardBox>
-        <OrderCardImg src={`https://sinapsisproductions.online/public/images/Flyer1.png`}/>
+        <OrderCardImg src={`http://localhost:7722/public/images/Flyer1.png`}/>
         <OrderCardTexts>
             <OrderCardTitle>{orderData.eventName}</OrderCardTitle>
             <OrderCardTickets>{orderData.ticketQuantityOrder}</OrderCardTickets>
-            <OrderCardlegend>Numero de tickets</OrderCardlegend>
-            <Link to={`/tickets/${orderData._id}`}><OrderCardBtn>Ver Tickets</OrderCardBtn></Link>
+            <OrderCardlegend>Tickets</OrderCardlegend>
+            <Link to={`/tickets/${orderData._id}`}><OrderCardBtn>View Tickets</OrderCardBtn></Link>
         </OrderCardTexts>
     </OrderCardBox>
   )

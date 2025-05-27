@@ -7,7 +7,9 @@ export default function Home() {
   return (
     <div>
       <Header/>
-      <Banner img="https://sinapsisproductions.online/public/images/HomeImage.png"/>
+      {/* <Banner img="http://localhost:7722/public/images/bgInicialBW.png"/> */}
+      <Banner img="http://localhost:7722/public/images/bgInicial.jpg"/>
+
       <EventPasarel/>
       <Footer/>
     </div>

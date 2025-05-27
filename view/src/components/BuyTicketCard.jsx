@@ -55,7 +55,7 @@ function BuyTicketCard({userMail}) {
     const [orderEventId, setorderEventId] = useState(null);
     const [eventPriceOrder, seteventPriceOrder] = useState(null);
     const fetchEvent = async () => {
-        await fetch(`https://sinapsisproductions.online/api/events/${eventId}`)
+        await fetch(`http://localhost:7722/api/events/${eventId}`)
           .then(response => response.json())
           .then(data => {
             setEvent(data)
@@ -98,10 +98,10 @@ function BuyTicketCard({userMail}) {
       }, [ticketQuantityOrder]);
   return (
     <BuyCard>
-        <BuyCardImg src={`https://sinapsisproductions.online/public/images/${eventData.eventBanner}`}/>
+        <BuyCardImg src={`http://localhost:7722/public/images/${eventData.eventBanner}`}/>
         <BuyCardTitle>{eventData.eventName}</BuyCardTitle>
         <BuyCardParr>{`Total: $${totalOrder}.00`}</BuyCardParr>
-        <BuyCardParr>Selecciona la cantidad</BuyCardParr>
+        <BuyCardParr>Quantity </BuyCardParr>
         <BuyCardCounter>
             <BuyCardBtn onClick={lessCount}>--</BuyCardBtn>{ticketQuantityOrder}<BuyCardBtn onClick={addCount}>+</BuyCardBtn>
         </BuyCardCounter>

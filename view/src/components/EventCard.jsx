@@ -29,6 +29,9 @@ const CardShowMore = styled.p`
   color: #D7FF52;
   font-size: 14px;
   text-align: center;
+  text-decoration: underline;
+  margin-top: 10px;
+
 `;
 const BtnContainer = styled.div`
   width: 100%;
@@ -39,10 +42,10 @@ const BtnContainer = styled.div`
 function EventCard({eventData}) {
   return (
     <Card>
-      <CardImg src={`https://sinapsisproductions.online/public/images/${eventData.eventBanner}`}/>
+      <CardImg src={`http://localhost:7722/public/images/${eventData.eventBanner}`}/>
       <CardTitle>{eventData.eventName}</CardTitle>
       <CardPrice>${eventData.eventPrice}.00</CardPrice>
-      <Link to={`/event/${eventData._id}`}><CardShowMore>Ver Mas</CardShowMore></Link>
+      <Link to={`/event/${eventData._id}`}><CardShowMore>Show More</CardShowMore></Link>
       <BtnContainer>
         <BuyNow eventId ={eventData._id}/>
       </BtnContainer>

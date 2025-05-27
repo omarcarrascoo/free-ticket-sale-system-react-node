@@ -44,7 +44,7 @@ export default function Footer() {
   return (
     <FooterContainer>
             <TnC>
-                <A className='link2' to={"/terms"}>Terms & Conditions </A> | <A className='link2' to={"/privacy"}>Privacy Policy</A> | <A>By ERA DIGITAL SOLUTION</A>
+                <A className='link2' to={"/terms"}>Terms & Conditions </A> | <A className='link2' to={"/privacy"}>Privacy Policy</A> | <A>By ERA DIGITAL SOLUTIONS</A>
             </TnC>
     </FooterContainer>  
   )

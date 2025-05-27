@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "https://sinapsisproductions.online/api/";
+const BASE_URL = "http://localhost:7722/api/"; //http://localhost:7722/api/
 
 // JSON.parse(JSON.parse(localStorage.getItem("persist:root")).user).currentUser.accessToken
 const localStorageValue = localStorage.getItem("persist:root");

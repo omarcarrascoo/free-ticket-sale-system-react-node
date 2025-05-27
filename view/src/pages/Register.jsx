@@ -41,6 +41,7 @@ const SiteLegend = styled.p`
 `;
 const LoginImg = styled.img`
     width: 100%;
+    
 `;
 const LoginFormContainer = styled.div`
     width: 90%;
@@ -121,7 +122,7 @@ function Register() {
             setPassword(updatedData.password)
         try {
             
-            const response = await axios.post(`https://sinapsisproductions.online/api/auth/register`, updatedData, {
+            const response = await axios.post(`http://localhost:7722/api/auth/register`, updatedData, {
             headers: {
               'Content-Type': 'application/json'
             }
@@ -154,31 +155,31 @@ function Register() {
   return (
     <LoginSection>
         <LoginLeft>
-            <LoginImg src='https://sinapsisproductions.online/public/images/BannerRegister.png'/>
+            <LoginImg src='http://localhost:7722/public/images/13.png'/>
         </LoginLeft>
         <LoginRight>
             <Link className='normal' to={"/"}>
                 <LogoBox>
-                    <SiteTitle>SINAPSIS</SiteTitle>
-                    <SiteLegend>POWER BY ERA DIGITAL SOLUTION</SiteLegend>
+                    <SiteTitle>MOTOR MANIA</SiteTitle>
+                    <SiteLegend>POWER BY ERA DIGITAL SOLUTIONS</SiteLegend>
                 </LogoBox>
             </Link>
             <LoginFormContainer>
-                <LoginFormTitle>Registrarse</LoginFormTitle>
+                <LoginFormTitle>Sign Up</LoginFormTitle>
                <LoginRegisterBox>
-                    <LoginFormText>Ya tienes cuenta?</LoginFormText>
-                    <Link to={"/login"}><LoginRegisterLink>Iniciar Sesion</LoginRegisterLink></Link>
+                    <LoginFormText>Do you have an account?</LoginFormText>
+                    <Link to={"/login"}><LoginRegisterLink>Login</LoginRegisterLink></Link>
                </LoginRegisterBox>
                 <LoginForm onSubmit={handleSubmit}>
-                    <LoginLabel>Nombre</LoginLabel>
+                    <LoginLabel>First Name</LoginLabel>
                     <LoginInputForm type="text" onChange={handleChange} name="name"/>
-                    <LoginLabel>Apellido</LoginLabel>
+                    <LoginLabel>Last Name</LoginLabel>
                     <LoginInputForm type="text" onChange={handleChange} name="lastName"/>
                     <LoginLabel>Email</LoginLabel>
                     <LoginInputForm type="text" onChange={handleChange} name="email"/>
-                    <LoginLabel>Contraseña</LoginLabel >
+                    <LoginLabel>Password</LoginLabel >
                     <LoginInputForm type="password" onChange={handleChange} name="password"/>
-                    <LoginSubmitButton type='submit'>Registrarse</LoginSubmitButton>
+                    <LoginSubmitButton type='submit'>Register</LoginSubmitButton>
                     {responseData && responseData.data? <AlertText>{responseData.data}</AlertText>:<AlertText></AlertText>}
                 </LoginForm>
             </LoginFormContainer>

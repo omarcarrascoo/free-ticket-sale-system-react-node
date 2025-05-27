@@ -154,17 +154,17 @@ function Header() {
     <HeaderSection bgcolornet={bgColorNet} txtcolor={textColor}>
         <HeaderContainer>
             <HeaderLeft >
-                <Link className='' to={"/"}><SiteLink txtcolor={textColor}>EVENTOS</SiteLink></Link>
-                {user? <Link className='margin-left-5' to={`/orders/${userId}`}><SiteLink txtcolor={textColor}>MIS ORDENES</SiteLink></Link>: <></>}
+                <Link className='' to={"/"}><SiteLink txtcolor={textColor}>EVENTS</SiteLink></Link>
+                {user? <Link className='margin-left-5' to={`/orders/${userId}`}><SiteLink txtcolor={textColor}>MY ORDERS</SiteLink></Link>: <></>}
             </HeaderLeft>
             <HeaderCenter>
-                <SiteTitle>SINAPSIS</SiteTitle>
-                <SiteLegend>POWERED BY ERA DIGITAL SOLUTION</SiteLegend>
+                <SiteTitle>MOTOR MANIA</SiteTitle>
+                <SiteLegend>POWERED BY ERA DIGITAL SOLUTIONS</SiteLegend>
             </HeaderCenter>
             <HeaderRight>
             {user == true? 
             <UserMenu>
-                <Link  className='flex' to={`/perfil/${userId}`}><SiteLinkB txtcolor={textColor}>PERFIL</SiteLinkB></Link> 
+                <Link  className='flex' to={`/perfil/${userId}`}><SiteLinkB txtcolor={textColor}>PROFILE</SiteLinkB></Link> 
                 <Link  className='flex'><SiteLinkB onClick={handleLogoutAndRefresh} txtcolor={textColor}>LOGOUT</SiteLinkB></Link> 
             </UserMenu>:<Link  className='flex' to={"/login"}><SiteLink txtcolor={textColor}><FaUser className='userIcon'/>Login / Sign-in</SiteLink></Link>}
             </HeaderRight>
@@ -175,15 +175,15 @@ function Header() {
         <MobileMenu isOpen={isOpen}>
             {user?
                 <MobileMenuOptions>
-                <MobileMenuLink txtcolor={menuTextColor} onClick={()=>setIsOpen(!isOpen)} className='closeMobileMenuBtn'><TfiClose className='closeMobileMenuBtnIcon' />Cerrar Menu</MobileMenuLink>
-                <Link to={"/"}><MobileMenuLink txtcolor={menuTextColor}>EVENTOS</MobileMenuLink></Link>
-                <Link to={`/orders/${userId}`}><MobileMenuLink txtcolor={menuTextColor}>MIS ORDENES</MobileMenuLink></Link>
-                <Link to={`/perfil/${userId}`}><MobileMenuLink txtcolor={menuTextColor}>PERFIL</MobileMenuLink></Link>
+                <MobileMenuLink txtcolor={menuTextColor} onClick={()=>setIsOpen(!isOpen)} className='closeMobileMenuBtn'><TfiClose className='closeMobileMenuBtnIcon' />Close Menu</MobileMenuLink>
+                <Link to={"/"}><MobileMenuLink txtcolor={menuTextColor}>EVENTS</MobileMenuLink></Link>
+                <Link to={`/orders/${userId}`}><MobileMenuLink txtcolor={menuTextColor}>MY ORDERS</MobileMenuLink></Link>
+                <Link to={`/perfil/${userId}`}><MobileMenuLink txtcolor={menuTextColor}>PROFILE</MobileMenuLink></Link>
                 <Link><MobileMenuLink onClick={handleLogoutAndRefresh} txtcolor={menuTextColor}>LOGOUT</MobileMenuLink></Link>
             </MobileMenuOptions>:
             <MobileMenuOptions>
-                <MobileMenuLink txtcolor={menuTextColor} onClick={()=>setIsOpen(!isOpen)} className='closeMobileMenuBtn'><TfiClose className='closeMobileMenuBtnIcon' />Cerrar Menu</MobileMenuLink>
-                <Link to={"/"}><MobileMenuLink txtcolor={menuTextColor}>EVENTOS</MobileMenuLink></Link>
+                <MobileMenuLink txtcolor={menuTextColor} onClick={()=>setIsOpen(!isOpen)} className='closeMobileMenuBtn'><TfiClose className='closeMobileMenuBtnIcon' />Close Menu</MobileMenuLink>
+                <Link to={"/"}><MobileMenuLink txtcolor={menuTextColor}>EVENTS</MobileMenuLink></Link>
                 <Link to={"/login"}><MobileMenuLink txtcolor={menuTextColor}>Login / Sign-in</MobileMenuLink></Link>
             </MobileMenuOptions>
         }

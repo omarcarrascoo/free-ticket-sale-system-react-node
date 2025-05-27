@@ -127,27 +127,27 @@ function Login() {
   return (
     <LoginSection>
         <LoginLeft>
-            <LoginImg src='https://sinapsisproductions.online/public/images/BannerLogin.png'/>
+            <LoginImg src='http://localhost:7722/public/images/9.jpg'/>
         </LoginLeft>
         <LoginRight>
             <Link className='normal' to={"/"}>
                 <LogoBox>
-                    <SiteTitle>SINAPSIS</SiteTitle>
-                    <SiteLegend>POWER BY ERA DIGITAL SOLUTION</SiteLegend>
+                    <SiteTitle>MOTOR MANIA</SiteTitle>
+                    <SiteLegend>POWER BY ERA DIGITAL SOLUTIONS</SiteLegend>
                 </LogoBox>
             </Link>
             <LoginFormContainer>
-                <LoginFormTitle>Accede a tus boletos</LoginFormTitle>
+                <LoginFormTitle>LOGIN TO SEE YOUR EVENTS</LoginFormTitle>
                <LoginRegisterBox>
-                    <LoginFormText>Aun no tienes cuenta?</LoginFormText>
-                    <Link to={"/register"}><LoginRegisterLink>Registrarse</LoginRegisterLink></Link>
+                    <LoginFormText>Don't have an account?</LoginFormText>
+                    <Link to={"/register"}><LoginRegisterLink>Sign Up</LoginRegisterLink></Link>
                </LoginRegisterBox>
                 <LoginForm>
                     <LoginLabel>Email</LoginLabel>
                     <LoginInputForm type="text" name='email' placeholder='example@gmail.com' onChange={(e)=> setEmail(e.target.value.toLowerCase())}/>
-                    <LoginLabel>Contraseña</LoginLabel>
+                    <LoginLabel>Password</LoginLabel>
                     <LoginInputForm type="password" name="password" id="password" placeholder='Password' onChange={(e)=> setPassword(e.target.value)}/>
-                    <LoginSubmitButton onClick={handdleClick}>Iniciar Sesion</LoginSubmitButton>
+                    <LoginSubmitButton onClick={handdleClick}>Login</LoginSubmitButton>
                     {responseData && responseData.data? <AlertText>{responseData.data}</AlertText>:<AlertText></AlertText>}
                 </LoginForm>
 

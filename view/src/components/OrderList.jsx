@@ -30,7 +30,7 @@ function OrderList() {
           const currentUser = user ? JSON.parse(user).currentUser : {};
           const TOKEN = currentUser && currentUser.accessToken ? currentUser.accessToken : null;
       if(TOKEN != null){
-        await fetch(`https://sinapsisproductions.online/api/orders/userOrders/${userId}`,{
+        await fetch(`http://localhost:7722/api/orders/userOrders/${userId}`,{
           headers: {
             'Content-Type': 'application/json',
             token: `Bearer ${TOKEN}`,

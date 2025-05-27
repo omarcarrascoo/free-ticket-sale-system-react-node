@@ -15,7 +15,7 @@ const BuyBtn = styled.button`
 `;
 function BuyNow({eventId}) {
   return (
-    <Link to={`/buy-tickets/${eventId}`} className='centerMargin'><BuyBtn>Comprar Tickets</BuyBtn></Link>
+    <Link to={`/buy-tickets/${eventId}`} className='centerMargin'><BuyBtn> Buy Tickets</BuyBtn></Link>
   )
 }
 
