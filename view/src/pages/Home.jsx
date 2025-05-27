@@ -7,8 +7,8 @@ export default function Home() {
   return (
     <div>
       <Header/>
-      {/* <Banner img="http://localhost:7722/public/images/bgInicialBW.png"/> */}
-      <Banner img="http://localhost:7722/public/images/bgInicial.jpg"/>
+      {/* <Banner img="http://http://134.199.238.36:7722//public/images/bgInicialBW.png"/> */}
+      <Banner img="http://http://134.199.238.36:7722//public/images/bgInicial.jpg"/>
 
       <EventPasarel/>
       <Footer/>

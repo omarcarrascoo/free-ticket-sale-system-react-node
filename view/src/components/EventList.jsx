@@ -15,7 +15,7 @@ const EventCards = styled.div`
 function EventList() {
   const [events, setEvents] = useState([])
   const fetchEvents =()=>{
-    fetch(`http://localhost:7722/api/events/`)
+    fetch(`http://http://134.199.238.36:7722//api/events/`)
     .then(response =>{
       return response.json()
     })
