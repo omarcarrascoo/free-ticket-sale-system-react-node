@@ -8,7 +8,7 @@ export default function Home() {
     <div>
       <Header/>
       {/* <Banner img="http://134.199.238.36:7722/public/images/bgInicialBW.png"/> */}
-      <Banner img="http://134.199.238.36:7722/public/images/bgInicial.jpg"/>
+      <Banner img="http://134.199.238.36:7722/public/images/bgInicial.JPG"/>
 
       <EventPasarel/>
       <Footer/>

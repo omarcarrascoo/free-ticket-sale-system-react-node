@@ -61,7 +61,7 @@ function OrderCard({orderData}) {
       }, []);
   return (
     <OrderCardBox>
-        <OrderCardImg src={`http://134.199.238.36:7722/public/images/Flyer1.png`}/>
+        <OrderCardImg src={`http://134.199.238.36:7722/public/images/flyer2.png`}/>
         <OrderCardTexts>
             <OrderCardTitle>{orderData.eventName}</OrderCardTitle>
             <OrderCardTickets>{orderData.ticketQuantityOrder}</OrderCardTickets>
